@@ -46,7 +46,7 @@
       content: '';
       position: fixed;
       inset: 0;
-      background-image: 
+      background-image:
         linear-gradient(rgba(34, 211, 238, 0.03) 1px, transparent 1px),
         linear-gradient(90deg, rgba(34, 211, 238, 0.03) 1px, transparent 1px);
       background-size: 60px 60px;
@@ -249,11 +249,13 @@
       position: relative;
     }
 
+    /* ===== FIXED AVATAR STYLES ===== */
     .avatar-inner {
       width: 100%;
       height: 100%;
       border-radius: 50%;
       background: var(--bg-card);
+      overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -262,6 +264,16 @@
       color: var(--accent);
       letter-spacing: -0.05em;
     }
+
+    .avatar-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 50%;
+      display: block;
+    }
+    /* ===== END FIXED AVATAR STYLES ===== */
 
     .avatar-ring::after {
       content: '';
@@ -457,6 +469,7 @@
       padding: 4px 10px;
       border-radius: 6px;
       margin-bottom: 14px;
+      align-self: flex-start;
     }
 
     .tag-soc { background: rgba(34, 211, 238, 0.12); color: var(--accent); }
@@ -736,7 +749,9 @@
         </div>
         <div class="hero-visual">
           <div class="avatar-ring">
-            <div class="avatar-inner"><img src="https://media.licdn.com/dms/image/v2/D4D03AQEJpzMsr9tB-A/profile-displayphoto-scale_400_400/B4DZ2VQVEpJQAg-/0/1776325581808?e=1793232000&v=beta&t=3QxrGWMPnyIjX5vOW_7OJttg8nnH2e0t5_HD-yCmL-I" alt=""></div>
+            <div class="avatar-inner">
+              <img src="https://media.licdn.com/dms/image/v2/D4D03AQEJpzMsr9tB-A/profile-displayphoto-scale_400_400/B4DZ2VQVEpJQAg-/0/1776325581808?e=1793232000&v=beta&t=3QxrGWMPnyIjX5vOW_7OJttg8nnH2e0t5_HD-yCmL-I" alt="Shah Zaib Sajid">
+            </div>
           </div>
         </div>
       </div>
