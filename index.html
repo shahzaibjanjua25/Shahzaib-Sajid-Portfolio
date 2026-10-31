@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Shah Zaib Sajid — Cybersecurity Engineer specializing in Detection Engineering, SOC Operations, Cloud Security & Security Automation. Wazuh Ambassador." />
   <title>Shah Zaib Sajid | Cybersecurity Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,6 +22,10 @@
       --green: #34d399;
       --orange: #fbbf24;
       --purple: #a78bfa;
+      --google-blue: #4285f4;
+      --google-red: #ea4335;
+      --google-yellow: #fbbc05;
+      --google-green: #34a853;
     }
 
     * {
@@ -554,6 +559,28 @@
       display: flex;
       align-items: flex-start;
       gap: 14px;
+      transition: all 0.25s;
+    }
+
+    .cert-card:hover {
+      border-color: rgba(34, 211, 238, 0.35);
+      transform: translateY(-2px);
+    }
+
+    /* Highlighted (featured) certificate — Google Cybersecurity */
+    .cert-card.featured {
+      border-color: rgba(66, 133, 244, 0.45);
+      background: linear-gradient(135deg, rgba(66, 133, 244, 0.06), rgba(52, 168, 83, 0.04));
+      box-shadow: 0 0 0 1px rgba(66, 133, 244, 0.15), 0 8px 28px rgba(66, 133, 244, 0.08);
+    }
+
+    .cert-card.featured:hover {
+      border-color: rgba(66, 133, 244, 0.65);
+      box-shadow: 0 0 0 1px rgba(66, 133, 244, 0.25), 0 12px 32px rgba(66, 133, 244, 0.15);
+    }
+
+    .cert-card.featured .cert-icon {
+      background: linear-gradient(135deg, rgba(66, 133, 244, 0.2), rgba(52, 168, 83, 0.15));
     }
 
     .cert-icon {
@@ -577,6 +604,35 @@
     .cert-card p {
       font-size: 0.82rem;
       color: var(--text-muted);
+    }
+
+    .cert-card a.cert-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: 6px;
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .cert-card a.cert-link:hover {
+      text-decoration: underline;
+    }
+
+    .cert-badge {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-left: 8px;
+      vertical-align: middle;
+      background: rgba(66, 133, 244, 0.18);
+      color: #8ab4f8;
     }
 
     /* ===== EDUCATION ===== */
@@ -737,11 +793,11 @@
     <div class="container">
       <div class="hero-content">
         <div>
-          <div class="hero-badge">Wazuh Ambassador & Available for Opportunities</div>
+          <div class="hero-badge">Wazuh Ambassador · Google Cybersecurity Certified · Available for Opportunities</div>
           <h1>Hi, I'm <span class="highlight">Shah Zaib Sajid</span></h1>
           <p class="subtitle">Cybersecurity Engineer · Detection Engineering · SOC</p>
           <p>
-            2+ years of hands-on experience in SOC operations, detection engineering, and incident response across hybrid cloud (AWS/Azure) and on-premises environments. Reduced false positives by 60-70% and MTTD by 35%.
+            2+ years of hands-on experience in SOC operations, detection engineering, and incident response across hybrid cloud (AWS/Azure) and on-premises environments. Reduced false positives by 60-70% and MTTD by 35%. Google Cybersecurity Professional Certificate holder.
           </p>
           <div class="hero-cta">
             <a href="#projects" class="btn btn-primary">View Projects →</a>
@@ -770,10 +826,10 @@
             Cybersecurity engineer with strong focus on <strong>detection engineering</strong>, SOC operations, and cloud security. I design and tune detection rules, investigate incidents, and build automated threat-intelligence workflows.
           </p>
           <p>
-            Author of a research paper on machine-learning based attack detection in imbalanced Windows Server logs. Founder of <strong>ByteBrusters</strong>, a community tech-education initiative, and co-founder of <strong>Pacific Trips</strong>, where I own all technical and web operations. I also run <strong>Scarf Aura</strong>, my own scarf & hijab brand. 
+            Author of a research paper on machine-learning based attack detection in imbalanced Windows Server logs. Founder of <strong>ByteBrusters</strong>, a community tech-education initiative, and co-founder of <strong>Pacific Trips</strong>, where I own all technical and web operations. I also run <strong>Scarf Aura</strong>, my own scarf & hijab brand.
           </p>
           <p>
-            Recently selected as a <strong>Wazuh Ambassador</strong>, where I engage with the global open-source security community and share detection engineering best practices. I also led a delegation of 45 students at a national engineering competition.
+            Recently selected as a <strong>Wazuh Ambassador</strong>, where I engage with the global open-source security community and share detection engineering best practices. I am also a <strong>Google Cybersecurity Professional Certificate</strong> holder (Coursera), having completed the 8-course professional specialization covering security analysis, SIEM tools, Linux/SQL, Python automation, IDS, incident response, and threat detection. I led a delegation of 45 students at a national engineering competition.
           </p>
           <p>
             Currently seeking an MSc in Cybersecurity and Computer Science to deepen expertise in detection engineering, cloud forensics, and security automation.
@@ -829,7 +885,6 @@
           </ul>
         </div>
 
-        <!-- NEW WAZUH AMBASSADOR ENTRY -->
         <div class="timeline-item">
           <div class="timeline-header">
             <div>
@@ -1165,6 +1220,7 @@
             <span class="skill-tag">Microsoft Sentinel</span>
             <span class="skill-tag">Splunk</span>
             <span class="skill-tag">Wazuh</span>
+            <span class="skill-tag">Chronicle</span>
             <span class="skill-tag">Detection Engineering</span>
             <span class="skill-tag">KQL</span>
           </div>
@@ -1177,6 +1233,7 @@
             <span class="skill-tag">SIRP</span>
             <span class="skill-tag">TheHive</span>
             <span class="skill-tag">Cortex</span>
+            <span class="skill-tag">NIST IR Lifecycle</span>
           </div>
         </div>
         <div class="skill-group">
@@ -1194,6 +1251,7 @@
           <div class="skill-tags">
             <span class="skill-tag">MITRE ATT&CK</span>
             <span class="skill-tag">NIST Zero Trust</span>
+            <span class="skill-tag">NIST CSF</span>
             <span class="skill-tag">OCSF</span>
             <span class="skill-tag">ISO 27001</span>
           </div>
@@ -1207,6 +1265,7 @@
             <span class="skill-tag">Firewalls</span>
             <span class="skill-tag">Wireshark</span>
             <span class="skill-tag">Snort</span>
+            <span class="skill-tag">tcpdump</span>
           </div>
         </div>
         <div class="skill-group">
@@ -1224,6 +1283,19 @@
             <span class="skill-tag">PyTorch</span>
           </div>
         </div>
+        <div class="skill-group">
+          <h4>Security Analysis (Google Certified)</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">Security Auditing</span>
+            <span class="skill-tag">Risk Assessment</span>
+            <span class="skill-tag">Linux CLI</span>
+            <span class="skill-tag">SQL Filtering</span>
+            <span class="skill-tag">Python Automation</span>
+            <span class="skill-tag">Incident Response</span>
+            <span class="skill-tag">Threat Detection</span>
+            <span class="skill-tag">Asset Classification</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -1233,6 +1305,19 @@
     <div class="container">
       <div class="section-label">Certifications</div>
       <h2 class="section-title">Credentials & Training</h2>
+
+      <!-- FEATURED CERTIFICATION -->
+      <div class="certs-grid" style="margin-bottom:16px">
+        <div class="cert-card featured" style="grid-column: span 2;">
+          <div class="cert-icon">🔐</div>
+          <div>
+            <h4>Google Cybersecurity Professional Certificate <span class="cert-badge">Featured</span></h4>
+            <p>Coursera · Google · 8-course professional specialization covering security analysis, SIEM tools, Linux & SQL, Python automation, IDS, incident response, and threat detection.</p>
+            <a href="https://www.coursera.org/account/accomplishments/specialization/CM5ILGVSJYZI" class="cert-link" target="_blank">Verify Credential on Coursera →</a>
+          </div>
+        </div>
+      </div>
+
       <div class="certs-grid">
         <div class="cert-card">
           <div class="cert-icon">☁️</div>
@@ -1348,6 +1433,13 @@
             <div>
               <a href="https://medium.com/@shahzaibjanjua25" target="_blank">Medium</a>
               <span>Articles & Writing</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="icon">🎓</div>
+            <div>
+              <a href="https://www.coursera.org/account/accomplishments/specialization/CM5ILGVSJYZI" target="_blank">Google Cybersecurity Certificate</a>
+              <span>Verified Credential</span>
             </div>
           </div>
         </div>
