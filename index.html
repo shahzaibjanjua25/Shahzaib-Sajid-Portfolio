@@ -42,7 +42,6 @@
       overflow-x: hidden;
     }
 
-    /* Background grid effect */
     body::before {
       content: '';
       position: fixed;
@@ -250,7 +249,6 @@
       position: relative;
     }
 
-    /* ===== FIXED AVATAR STYLES ===== */
     .avatar-inner {
       width: 100%;
       height: 100%;
@@ -274,7 +272,6 @@
       border-radius: 50%;
       display: block;
     }
-    /* ===== END FIXED AVATAR STYLES ===== */
 
     .avatar-ring::after {
       content: '';
@@ -566,13 +563,26 @@
     .cert-icon {
       width: 40px;
       height: 40px;
-      background: var(--accent-glow);
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
       border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      font-size: 1.2rem;
+    }
+
+    .cert-icon img {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .cert-icon svg {
+      width: 22px;
+      height: 22px;
+      display: block;
     }
 
     .cert-card h4 {
@@ -661,7 +671,20 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .contact-item .icon img {
+      width: 22px;
+      height: 22px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .contact-item .icon svg {
+      width: 20px;
+      height: 20px;
+      display: block;
     }
 
     .contact-item a {
@@ -696,42 +719,20 @@
 
     /* ===== RESPONSIVE ===== */
     @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-      }
-      .nav-toggle {
-        display: block;
-      }
+      .nav-links { display: none; }
+      .nav-toggle { display: block; }
       .hero-content {
         grid-template-columns: 1fr;
         text-align: center;
       }
-      .hero p {
-        margin-left: auto;
-        margin-right: auto;
-      }
-      .hero-cta {
-        justify-content: center;
-      }
-      .hero-visual {
-        order: -1;
-      }
-      .avatar-ring {
-        width: 200px;
-        height: 200px;
-      }
-      .avatar-inner {
-        font-size: 3.5rem;
-      }
-      .about-grid {
-        grid-template-columns: 1fr;
-      }
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-      .timeline-header {
-        flex-direction: column;
-      }
+      .hero p { margin-left: auto; margin-right: auto; }
+      .hero-cta { justify-content: center; }
+      .hero-visual { order: -1; }
+      .avatar-ring { width: 200px; height: 200px; }
+      .avatar-inner { font-size: 3.5rem; }
+      .about-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .timeline-header { flex-direction: column; }
     }
   </style>
 </head>
@@ -773,7 +774,10 @@
         <div class="hero-visual">
           <div class="avatar-ring">
             <div class="avatar-inner">
-              <img src="https://media.licdn.com/dms/image/v2/D4D03AQEJpzMsr9tB-A/profile-displayphoto-scale_400_400/B4DZ2VQVEpJQAg-/0/1776325581808?e=1793232000&v=beta&t=3QxrGWMPnyIjX5vOW_7OJttg8nnH2e0t5_HD-yCmL-I" alt="Shah Zaib Sajid">
+              <img src="https://tinyurl.com/mvemzj7d"
+                   alt="Shah Zaib Sajid"
+                   referrerpolicy="no-referrer"
+                   onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23111827%22/><text x=%2250%22 y=%2262%22 font-family=%22Inter,sans-serif%22 font-size=%2240%22 font-weight=%22800%22 fill=%22%2322d3ee%22 text-anchor=%22middle%22>SZ</text></svg>';">
             </div>
           </div>
         </div>
@@ -1293,63 +1297,88 @@
       <div class="section-label">Certifications</div>
       <h2 class="section-title">Credentials & Training</h2>
       <div class="certs-grid">
+
         <div class="cert-card">
-          <div class="cert-icon">🔐</div>
+          <div class="cert-icon">
+            <img src="https://cdn.simpleicons.org/google/4285F4" alt="Google">
+          </div>
           <div>
             <h4>Google Cybersecurity Professional Certificate</h4>
             <p>Coursera · Google · Security analysis, SIEM, Linux, SQL, Python, IDS, IR</p>
             <a href="https://www.coursera.org/account/accomplishments/specialization/CM5ILGVSJYZI" class="cert-link" target="_blank">Verify Credential →</a>
           </div>
         </div>
+
         <div class="cert-card">
-          <div class="cert-icon">☁️</div>
+          <div class="cert-icon">
+            <img src="https://cdn.simpleicons.org/microsoft/5E5E5E" alt="Microsoft">
+          </div>
           <div>
             <h4>Microsoft Azure Fundamentals (AZ-900)</h4>
             <p>Microsoft · Cloud fundamentals & security</p>
           </div>
         </div>
+
         <div class="cert-card">
-          <div class="cert-icon">🔒</div>
+          <div class="cert-icon">
+            <img src="https://cdn.simpleicons.org/amazonwebservices/FF9900" alt="AWS">
+          </div>
           <div>
             <h4>AWS Certified Cloud Security Practitioner</h4>
             <p>The SecOps Group · AWS cloud security</p>
           </div>
         </div>
+
         <div class="cert-card">
-          <div class="cert-icon">🛡️</div>
+          <div class="cert-icon">
+            <img src="https://cdn.simpleicons.org/tryhackme/ffffff" alt="TryHackMe">
+          </div>
           <div>
             <h4>TryHackMe SOC Level 1</h4>
             <p>Hands-on SOC analyst path</p>
           </div>
         </div>
+
         <div class="cert-card">
-          <div class="cert-icon">⚔️</div>
+          <div class="cert-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="22" y1="12" x2="18" y2="12"/><line x1="6" y1="12" x2="2" y2="12"/><line x1="12" y1="6" x2="12" y2="2"/><line x1="12" y1="22" x2="12" y2="18"/></svg>
+          </div>
           <div>
             <h4>Practical Ethical Hacking</h4>
             <p>TCM Security · Offensive security</p>
           </div>
         </div>
+
         <div class="cert-card">
-          <div class="cert-icon">📊</div>
+          <div class="cert-icon">
+            <img src="https://cdn.simpleicons.org/splunk/65A637" alt="Splunk">
+          </div>
           <div>
             <h4>Splunk Fundamentals</h4>
             <p>Alison · SIEM searching & dashboards</p>
           </div>
         </div>
+
         <div class="cert-card">
-          <div class="cert-icon">🎣</div>
+          <div class="cert-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3v8a6 6 0 0 0 12 0V8"/><path d="M3 3h4"/><circle cx="19" cy="6" r="1"/></svg>
+          </div>
           <div>
             <h4>Certified Phishing Prevention Specialist</h4>
             <p>Hack & Fix · Phishing detection & prevention</p>
           </div>
         </div>
+
         <div class="cert-card">
-          <div class="cert-icon">🕵️</div>
+          <div class="cert-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
           <div>
             <h4>Cyber Threat Intelligence 101</h4>
             <p>arcX · Threat actors, TTPs & intel lifecycle</p>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -1383,35 +1412,45 @@
       <div class="contact-grid">
         <div class="contact-info">
           <div class="contact-item">
-            <div class="icon">📧</div>
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </div>
             <div>
               <a href="mailto:shahzaibjanjua25@gmail.com">shahzaibjanjua25@gmail.com</a>
               <span>Email</span>
             </div>
           </div>
           <div class="contact-item">
-            <div class="icon">📱</div>
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
             <div>
               <a href="tel:+923132677570">+92 313 2677570</a>
               <span>Phone</span>
             </div>
           </div>
           <div class="contact-item">
-            <div class="icon">💼</div>
+            <div class="icon">
+              <img src="https://cdn.simpleicons.org/linkedin/0A66C2" alt="LinkedIn">
+            </div>
             <div>
               <a href="https://linkedin.com/in/shah-zaib-sajid-204461203" target="_blank">linkedin.com/in/shah-zaib-sajid</a>
               <span>LinkedIn</span>
             </div>
           </div>
           <div class="contact-item">
-            <div class="icon">🐙</div>
+            <div class="icon">
+              <img src="https://cdn.simpleicons.org/github/ffffff" alt="GitHub">
+            </div>
             <div>
               <a href="https://github.com/shahzaibjanjua25" target="_blank">github.com/shahzaibjanjua25</a>
               <span>GitHub</span>
             </div>
           </div>
           <div class="contact-item">
-            <div class="icon">✍️</div>
+            <div class="icon">
+              <img src="https://cdn.simpleicons.org/medium/ffffff" alt="Medium">
+            </div>
             <div>
               <a href="https://medium.com/@shahzaibjanjua25" target="_blank">Medium</a>
               <span>Articles & Writing</span>
